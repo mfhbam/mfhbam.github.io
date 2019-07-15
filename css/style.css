@@ -1,0 +1,333 @@
+/*the default styling of font and background*/
+body{
+    background-color: #f1f2f5;
+    font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/*default styling of the headings*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 200;
+}
+
+header, div.testimony, .features-section, div.ad, div.history, div.workshop, div.footer, div.content {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+/*default styling of navbar*/
+nav{
+    position: fixed;
+    z-index: 1;
+    background-color: rgb(18, 18, 20);
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/*style for list items*/
+ul{
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/*style for svg graphic*/
+svg.top{
+    height: 1em;
+    fill: white;
+}
+
+/*style for list navigation*/
+a.listnav{
+    font-size: 16px;
+    color: white;
+    font-variant: small-caps;
+    text-decoration: none;
+}
+
+/*style for list navigation on mouse interaction*/
+a.listnav:hover, a.listnav:focus, svg.top:hover, svg.top:focus{
+    color: #f08B06;
+    fill: #f08B06;
+}
+
+/*style for paragraph header*/
+p.parahead{
+    font-weight: 100;
+    max-width: 50%;
+    margin-left: 2.5%;
+}
+
+/*style for second heading of history class*/
+h2.history{
+    font-size: 2em;
+}
+
+/*style for workshop container*/
+div.workshop {
+    text-align: center;
+    align-content: center;
+}
+
+/*default styling for small screen size devices*/
+@media (max-width: 767px){
+    header{
+        background-image: linear-gradient(90deg, white, rgba(0,0,0,0)), url('../img/pencil-header-xs.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    h2.workshop{
+        font-size: 2em;
+    }
+}
+
+/*default styling for medium screen size devices*/
+@media (min-width: 768px) and (max-width:991px) {
+    header{
+        background-image: linear-gradient(90deg, white, rgba(0,0,0,0)), url('../img/pencil-header-sm.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    p.parahead{
+        font-size: 1.5em;
+    }
+
+    div.ad{
+        background-image: url('../img/colors-background-sm.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    h2.history{
+        font-size: 3em;
+    }
+
+    h2.workshop{
+        font-size: 2.5em;
+    }
+
+    div.icon{
+        float: right;
+    }
+
+    nav{
+        background-color: rgba(18, 18, 20, 0.8);
+    }
+
+    div.workshop{
+        text-align: left;
+    }
+}
+
+/*default styling for larger screen devices with width less than 1199px*/
+@media (min-width: 992px) and (max-width:1199px) {
+    header{
+        background-image: linear-gradient(90deg, white, rgba(0,0,0,0)), url('../img/pencil-header-md.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    p.parahead{
+        font-size: 1.5em;
+    }
+
+    div.ad{
+        background-image: url('../img/colors-background-md.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    h2.workshop{
+        font-size: 2.5em;
+    }
+
+    div.icon{
+        float: right;
+    }
+
+    nav{
+        background-color: rgba(18, 18, 20, 0.8);
+    }
+
+    h2.history{
+        font-size: 3em;
+    }
+
+    div.workshop{
+        text-align: left;
+    }
+
+}
+
+/*default styling for devices with screen width larger than 1200px*/
+@media (min-width: 1200px) {
+    header{
+        background-image: linear-gradient(90deg, white, rgba(0,0,0,0)), url('../img/pencil-header-lg.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    p.parahead{
+        font-size: 1.5em;
+    }
+
+    div.ad{
+        background-image: url('../img/colors-background-lg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    h2.history{
+        font-size: 3em;
+    }
+
+    h2.workshop{
+        font-size: 2.5em;
+    }
+
+    div.icon{
+        float: right;
+    }
+
+    nav{
+        background-color: rgba(18, 18, 20, 0.8);
+    }
+
+    div.workshop{
+        text-align: left;
+    }
+}
+
+h1.head{
+    font-size: 4em;
+    margin-left: 2.5%;
+}
+
+p.workshop{
+    font-weight: 100;
+}
+
+
+q{
+    display: block;
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+.features-section{
+    background-color: #e0deda;
+}
+
+svg.features{
+    fill: #5a3822;
+    width: 50px;
+}
+
+
+div.workshop{
+    background-color: #e0deda;
+}
+
+div.footer{
+    border-style: solid;
+    border-width: 0px;
+    border-top-width: 3px;
+    border-color: #583820;
+}
+
+div.icon{
+    font-size: 2em;
+}
+
+p.footer{
+    font-size: 12px;
+}
+
+p.features{
+    font-size: 14px;
+    font-weight: normal;
+}
+
+h2.ad{
+    font-size: 3em;
+    max-width: 50%;
+}
+
+img.panda{
+    align-content: center;
+}
+
+.input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}
+
+table{
+    padding-top: 3em;
+    margin-top: 1.5em;
+}
+
+.cart{
+    float: right;
+}
+
+.quantity{
+    width: 50%;
+}
+
+button.float-right{
+    float: right;
+    margin-right: 1%;
+}
+
+form.center{
+    margin-top: 25%;
+}
+
+img.fixedSize{
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+    border: 10px groove gray;
+}
+
+span.price{
+    font-weight: bold;
+    color: red;
+    margin-bottom: 15%;
+}
+
+a.buynow{
+    position:absolute;
+    right: 5%;
+    bottom: 3%;
+}
+
+.tagline{
+    color: black;
+    font-weight: bolder;
+    font-size: 110%;
+    text-shadow: 100px;
+    margin-bottom: 0;
+}
+
+div.plusMinus{
+    width: 30%;
+}
+
+td.item{
+    width: 40%;
+}

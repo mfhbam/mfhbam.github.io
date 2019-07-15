@@ -1,0 +1,51 @@
+<main>
+    <div class="table-responsive" ng-controller="tableCtrl">
+    <!--display cart items-->
+    <table class="table">
+        <tr>
+            <th>Item</th>
+            <th>Color</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Total Price</th>
+        </tr>
+        <tr ng-repeat-start="(key, items) in cart">
+            <tr ng-repeat-end ng-repeat="(color, item) in items track by $index">
+                    <td class="item" rowspan="{{items.length}}" ng-show="$first">{{key}}</td>
+                    <td ng-hide="$first"></td>
+                    <td>{{color}}</td>
+                    <td class="plusMinus">
+                        <div class="input-group plusMinus">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-danger btn-number" ng-click="decrease(key, color, item)">
+                                <span class="glyphicon glyphicon-minus"></span>
+                            </button>
+                        </span>
+                        <input type="number" name="quant[2]" class="form-control input-number quantity" min="0" ng-model="item.quantity">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-success btn-number" ng-click="increase(key, color, item)">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </span>
+                    </div>
+                    </td>
+                    <td>{{item.unitPrice | currency}}</td>
+                    <td>{{item.total | currency}}</td>
+                    <td><button type="button" class="btn btn-danger" ng-click="removeItem(key, color, item)">Remove</button></td>
+            </tr>
+            <!--display total-->
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Total:</td>
+                <td>{{sum() | currency}}</td>
+                <td></td>
+            </tr>
+            </td>
+        </tr>   
+    </table>
+    <!--checkout button-->
+    <button type="button" class="btn btn-info btn-lg float-right" ng-click="checkout()">Checkout</button>
+    </div>
+</main>

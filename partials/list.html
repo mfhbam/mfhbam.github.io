@@ -1,0 +1,20 @@
+<main>
+<div class='content'>
+    Too many choices? Filter your selection here
+    <input type="text" name="search" placeholder="Search.." ng-model="searchFilter">
+</div>
+
+<div class="container-fluid">
+    <div class="row" ng-repeat="pencils in pencilsGroup">
+        <div class="col-md-4" ng-repeat="pencil in pencils | filter:searchFilter">
+            <img class="fixedSize" ng-src="{{pencil.image}}">
+            <a ng-href="#/order/{{pencil.id}}">
+            <p class="tagline">{{ pencil.tagline }}</p>
+            <span class="price">{{ pencil.price | currency}}/box</span>
+            <a type="button" class="btn btn-success buynow" href="#/order/{{pencil.id}}">Buy now</a>
+        </div>
+    </div>
+</div>
+
+
+</main>
